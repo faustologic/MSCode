@@ -44,7 +44,7 @@ body {
 #banner {
   background: rgba(0, 0, 0, 0.509);
   padding: 5vh 0 5vh 0;
-  height: fit-content;
+  height: 75vh;
   margin-bottom: 18px;
 }
 
@@ -111,7 +111,7 @@ body {
 /* -----CONTENT-2------ */
 
 #content-2 {
-  background: black;
+  background-color: rgb(19, 19, 19);
   height: auto;
   padding-top: 1px;
   padding: 45vh 0;
@@ -262,18 +262,32 @@ body {
 
 #approach {
   display: flex;
-  padding: 35vh 5vh;
+  padding: 35vh 0;
   background-color: rgb(19, 19, 19);
 }
 
 #approach-content {
-  padding: 50px 20px 10px 150px;
+  padding: 45px 60px 0 170px;
   color: whitesmoke;
+  width: 300px;
+}
+#approach-content p {
+  text-align: justify;
+}
+
+#approach-content i {
+  display: none;
+  font-size: 35px;
+  margin: 0 0 0 10px;
+  margin-top: 0;
+  color: red;
 }
 
 #approach-testimonial {
-  padding: 20px 100px 20px 10px;
-  font-size: 45px;
+  padding: 0 90px 0 30px;
+  font-size: 52px;
   font-weight: 400;
   color: whitesmoke;
+  width: 600px;
+  line-height: 70px;
 }
