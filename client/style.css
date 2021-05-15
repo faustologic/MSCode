@@ -2,6 +2,7 @@ body {
   width: 100%;
   margin: 0;
   font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
 }
 
 /* -----------HEADER---------- */
@@ -12,6 +13,21 @@ body {
   background-color: black;
   z-index: 5;
 }
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  animation: smoothScroll 1s forwards;
+}
+/* @keyframes smoothScroll {
+  0% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+} */
 
 #header-img {
   width: 165px;
@@ -43,9 +59,7 @@ body {
 
 #banner {
   background: rgba(0, 0, 0, 0.509);
-  padding: 5vh 0 5vh 0;
-  height: 75vh;
-  margin-bottom: 18px;
+  padding: 10vh 0;
 }
 
 #video_background {
@@ -271,16 +285,11 @@ body {
   color: whitesmoke;
   width: 300px;
 }
+#approach-content h2 {
+  font-weight: 400;
+}
 #approach-content p {
   text-align: justify;
-}
-
-#approach-content i {
-  display: none;
-  font-size: 35px;
-  margin: 0 0 0 10px;
-  margin-top: 0;
-  color: red;
 }
 
 #approach-testimonial {
@@ -290,4 +299,60 @@ body {
   color: whitesmoke;
   width: 600px;
   line-height: 70px;
+}
+
+/* --------CAROUSEL, its in othe css file------ */
+
+/* ---------FORM-CONTACTS------------ */
+
+#contact {
+  display: flex;
+  background-color: rgb(19, 19, 19);
+  padding: 35vh 0;
+}
+
+/* Video css on top */
+
+#contact-box {
+  margin: 10px auto;
+  background-color: green;
+  padding: 20px 50px;
+  width: 50%;
+}
+
+#contact-box h1 {
+  font-size: 55px;
+}
+
+#contact-box i {
+  font-size: 80px;
+  margin: 0 0 0 200px;
+  margin-top: 0;
+  color: red;
+}
+
+#contact-form {
+  display: inline;
+  background-color: red;
+  margin: 10px auto;
+  padding: 20px 50px;
+  width: 50%;
+}
+
+#contact-form input {
+  width: 97%;
+  margin: 10px 0;
+  padding: 5px;
+}
+
+#contact-form input:focus {
+  border: none;
+}
+
+#message-input {
+  height: 60px;
+}
+
+#contact-form button {
+  width: 100%;
 }
