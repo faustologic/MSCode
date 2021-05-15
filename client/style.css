@@ -60,6 +60,7 @@ body {
 #banner {
   background: rgba(0, 0, 0, 0.509);
   padding: 10vh 0;
+  position: relative;
 }
 
 #video_background {
@@ -107,13 +108,13 @@ body {
   height: 30px;
 }
 
-#banner p {
+/* #banner p {
   display: none;
   color: white;
   text-align: justify;
   align-self: center;
   line-height: 20px;
-}
+} */
 
 #banner-h1-2 {
   text-align: center;
@@ -308,51 +309,90 @@ body {
 #contact {
   display: flex;
   background-color: rgb(19, 19, 19);
-  padding: 35vh 0;
+  padding: 25vh 0;
 }
 
 /* Video css on top */
 
 #contact-box {
   margin: 10px auto;
-  background-color: green;
   padding: 20px 50px;
   width: 50%;
 }
 
 #contact-box h1 {
-  font-size: 55px;
+  font-size: 75px;
+  color: whitesmoke;
+  font-weight: 400;
+  padding-left: 150px;
+  padding-top: 20px;
 }
 
-#contact-box i {
+/* #contact-box i {
   font-size: 80px;
   margin: 0 0 0 200px;
   margin-top: 0;
   color: red;
-}
+} */
 
 #contact-form {
   display: inline;
-  background-color: red;
   margin: 10px auto;
-  padding: 20px 50px;
+  padding: 20px 150px 20px 10px;
   width: 50%;
 }
 
 #contact-form input {
-  width: 97%;
+  width: 90%;
   margin: 10px 0;
-  padding: 5px;
+  padding: 10px 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(245, 245, 245, 0.79);
+  color: rgba(245, 245, 245, 0.9);
+  -webkit-appearance: none;
+  transition: 0.3s;
 }
 
 #contact-form input:focus {
   border: none;
+  border-bottom: 1px solid rgba(255, 0, 0, 0.8);
+  padding: 10px 0;
+  outline: none;
 }
 
-#message-input {
-  height: 60px;
+#contact-form textarea {
+  width: 90%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(245, 245, 245, 0.79);
+  color: rgba(245, 245, 245, 0.9);
+  font-family: "Montserrat", sans-serif;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+#contact-form textarea:focus {
+  border: none;
+  border-bottom: 1px solid rgba(255, 0, 0, 0.8);
+  outline: none;
 }
 
 #contact-form button {
-  width: 100%;
+  background: red;
+  color: whitesmoke;
+  border: none;
+  font-size: 14px;
+  margin-top: 10px;
+  padding: 5px 10px;
+  transition: 0.3s;
+  cursor: pointer;
+  width: 25%;
 }
+
+#contact-form button:hover {
+  background: whitesmoke;
+  color: red;
+}
+
+/* ---------------MEDIA QUERIE----------------- */
