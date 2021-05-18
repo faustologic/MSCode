@@ -8,26 +8,30 @@ body {
 /* -----------HEADER---------- */
 
 #header {
-  display: flex;
-  justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 5;
+  width: 100%;
+}
+#header-main-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
 }
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
   opacity: 0.9;
-  animation: smoothScroll 1s forwards;
+  animation: smoothScroll 0.4s forwards;
 }
-/* @keyframes smoothScroll {
+@keyframes smoothScroll {
   0% {
-    transform: translateY(-40px);
+    transform: translateY(-50px);
   }
   100% {
     transform: translateY(0px);
   }
-} */
+}
 
 #header-img {
   width: 165px;
@@ -58,9 +62,9 @@ body {
 /* ------BANNER----- */
 
 #banner {
-  background: rgba(0, 0, 0, 0.509);
-  padding: 10vh 0;
+  background: rgba(0, 0, 0, 0.5);
   position: relative;
+  height: 100vh;
 }
 
 #video_background {
@@ -85,39 +89,41 @@ body {
   z-index: 1;
 }
 
-#banner-h1 {
-  text-align: center;
-  color: whitesmoke;
-  font-size: 95px;
-  font-weight: 400;
-  padding-right: 75px;
-  height: 30px;
-}
+#banner-main-box {
+  position: absolute;
+  margin-top: 15vh;
 
-#banner-content {
-  display: flex;
+  align-items: center;
   width: 100%;
-  margin: 0 auto;
+  display: block;
 }
-#banner-h1-1 {
+#banner-first-title {
   text-align: center;
+  margin: -20px auto;
+}
+
+#banner-first-title h1 {
   color: whitesmoke;
   font-size: 95px;
   font-weight: 400;
-  margin: 30px 10px 10px 150px;
-  height: 30px;
 }
 
-/* #banner p {
-  display: none;
-  color: white;
-  text-align: justify;
-  align-self: center;
-  line-height: 20px;
-} */
-
-#banner-h1-2 {
+#banner-second-title {
   text-align: center;
+  margin: -70px auto;
+}
+#banner-second-title h1 {
+  color: whitesmoke;
+  font-size: 95px;
+  font-weight: 400;
+  margin-right: 350px;
+}
+#banner-third-title {
+  text-align: center;
+  margin: -75px auto;
+}
+
+#banner-third-title h1 {
   color: whitesmoke;
   font-size: 95px;
   font-weight: 400;
@@ -127,36 +133,34 @@ body {
 
 #content-2 {
   background-color: rgb(19, 19, 19);
-  height: auto;
-  padding-top: 1px;
-  padding: 45vh 0;
-  margin-top: -1px;
+  height: 100vh;
+  position: relative;
+  width: 100%;
 }
 
 #content-content {
+  position: absolute;
   text-align: center;
-  padding: 10px 0 1px 0;
-  border-bottom: 1px solid red;
-  width: 58%;
-  margin: 0 auto;
+  /* border-bottom: 1px solid red; */
+  margin-top: 40vh;
+  width: 100%;
 }
 
 #content-2 h1 {
   color: whitesmoke;
   font-weight: lighter;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  font-size: 45px;
 }
 
 /* ----SERVICES----- */
 
 #service {
   background: black;
-  height: auto;
-  margin-top: -1px;
-  padding-top: 1px;
-  padding: 10vh 0 25vh 0;
+  height: 100vh;
   color: whitesmoke;
+  position: relative;
+  width: 100%;
 }
 
 #service h1 {
@@ -166,9 +170,15 @@ body {
 }
 
 #service-main-box {
+  display: grid;
+  position: absolute;
+  margin-top: 10vh;
+  width: 100%;
+  align-items: center;
+}
+#service-box-container {
   display: flex;
-  margin: 10px 20px 10px 20px;
-  padding-top: 30px;
+  margin: 30px auto;
 }
 
 #service-box {
@@ -209,38 +219,46 @@ body {
 
 #call-action {
   background-image: url(./media/polygon-background.jpg);
-  background-color: rgba(0, 0, 0, 0.502);
+  background-color: rgba(0, 0, 0, 0.5);
   background-attachment: fixed;
   background-size: cover;
   padding-top: 1px;
   height: 100vh;
+  position: relative;
+  width: 100%;
 }
 
 #call-box {
-  display: flex;
+  position: absolute;
+  display: inline-flex;
   align-items: center;
-  align-content: center;
-  padding: 20px 10px;
-  margin-top: 210px;
-  justify-content: space-evenly;
+  padding: 20px;
+  margin-top: 35vh;
+  margin-left: 15%;
+}
+#call-box-title {
+  background-color: transparent;
 }
 
-#call-box h1 {
+#call-box-title h1 {
   color: whitesmoke;
   font-size: 55px;
-  margin-left: 80px;
+  margin: 39px 50px;
   font-weight: 500;
 }
+#call-box-button {
+  background-color: transparent;
+}
 
-#call-box button {
+#call-box-button button {
   background-color: red;
   border: none;
-  padding: 20px 30px;
+  padding: 15px 30px;
   color: whitesmoke;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 25px;
-  margin-right: 100px;
+  margin: 41px 50px;
   transition: 0.4s;
   cursor: pointer;
 }
@@ -253,9 +271,16 @@ body {
 /* -----ABOUT---------- */
 
 #about {
-  display: flex;
-  padding: 24vh 5vh;
+  width: 100%;
   background-color: black;
+  height: 100vh;
+  position: relative;
+}
+
+#about-main-box {
+  display: flex;
+  position: absolute;
+  margin-top: 25vh;
 }
 
 #about-span {
@@ -278,30 +303,43 @@ body {
 /* ------APPROACH----------- */
 
 #approach {
-  display: flex;
-  padding: 35vh 0;
+  width: 100%;
+  position: relative;
+  height: 100vh;
   background-color: rgb(19, 19, 19);
+}
+#approach-main-box {
+  position: absolute;
+  display: flex;
+  margin-top: 35vh;
+  padding: 20px;
+  align-items: center;
 }
 
 #approach-content {
-  padding: 45px 60px 0 170px;
   color: whitesmoke;
-  width: 300px;
+  margin-left: 150px;
+  margin-right: 50px;
 }
 #approach-content h2 {
   font-weight: 400;
 }
 #approach-content p {
   text-align: justify;
+  padding-right: 50px;
 }
 
 #approach-testimonial {
-  padding: 0 90px 0 30px;
-  font-size: 52px;
+  font-size: 40px;
   font-weight: 400;
   color: whitesmoke;
-  width: 600px;
-  line-height: 70px;
+  width: 90%;
+  margin-right: 150px;
+  padding-left: 50px;
+}
+#approach-testimonial p {
+  padding-right: 50px;
+  margin: 0 auto;
 }
 
 /* --------CAROUSEL, its in othe css file------ */
@@ -309,12 +347,16 @@ body {
 /* ---------FORM-CONTACTS------------ */
 
 #contact {
-  display: flex;
+  width: 100%;
+  position: relative;
   background-color: rgb(19, 19, 19);
-  padding: 25vh 0;
+  height: 100vh;
 }
-
-/* Video css on top */
+#contact-main-box {
+  position: absolute;
+  margin-top: 20vh;
+  display: flex;
+}
 
 #contact-box {
   margin: 10px auto;
@@ -330,17 +372,10 @@ body {
   padding-top: 20px;
 }
 
-/* #contact-box i {
-  font-size: 80px;
-  margin: 0 0 0 200px;
-  margin-top: 0;
-  color: red;
-} */
-
 #contact-form {
   display: inline;
   margin: 10px auto;
-  padding: 20px 150px 20px 10px;
+  padding: 20px 150px 20px 100px;
   width: 50%;
 }
 
@@ -397,153 +432,56 @@ body {
   color: red;
 }
 
+/* ------FOOTER------------------------- */
+#footer {
+  width: 100%;
+  position: relative;
+  background-color: rgb(19, 19, 19);
+  color: rgba(245, 245, 245, 0.4);
+  height: 12vh;
+}
+#footer-main-box {
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  width: 100%;
+  font-size: 15px;
+  border-top: 1px dotted rgba(245, 245, 245, 0.3);
+}
+
+#footer-year {
+  background-color: transparent;
+  padding: 10px 20px;
+}
+#footer-back-link {
+  color: rgb(245, 245, 245, 0.4);
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+#footer-back-link:hover {
+  color: red;
+}
+
+#footer-back-top i,
+#footer-back-top p {
+  margin: 0 3px;
+  font-size: 15px;
+}
+
+#footer-allRights {
+  background-color: transparent;
+  padding: 10px 20px;
+}
+
 /* ---------------MEDIA QUERIE LARGE SIZE----------------- */
 
 @media only screen and (min-width: 1400px) {
   body {
     width: 100%;
-    text-align: -webkit-center;
-    background-color: black;
-  }
-  #header.sticky {
-    margin-left: 185px;
-  }
-  #header,
-  #banner,
-  #service {
-    max-width: 1380px;
-  }
-  #content-2 {
-    max-width: 1380px;
-    max-height: 50vh;
-  }
-  #call-action {
-    max-width: 1380px;
-    max-height: 50vh;
-  }
-
-  div#about {
-    width: 1380px;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  #about-title {
-    text-align: start;
-    padding-right: 8vh;
-    padding-left: 30px;
-    letter-spacing: 5px;
-  }
-  #approach {
-    max-width: 1380px;
-  }
-  .Carousel {
-    max-width: 1380px;
-  }
-  #contact {
-    max-width: 1380px;
-  }
-}
-
-/*----------- MEDIA QUERIE SMALL SIZE SCREENS------------- */
-
-@media only screen and (max-width: 600px) {
-  body {
-    width: 100%;
-  }
-  #header {
-    display: grid;
-    justify-content: center;
-    background-color: black;
-  }
-  #header-img {
-    margin: 0 auto;
-  }
-  #header.sticky {
-    width: auto;
-  }
-  #banner {
-    max-height: 100%;
-  }
-  #banner-h1,
-  #banner-h1-1,
-  #banner-h1-2 {
-    font-size: 55px;
-    margin: 20px auto;
-    padding: 0 10px;
-  }
-
-  #content-2 {
-    padding-top: 100px;
-    padding-bottom: 200px;
-  }
-  #service {
-    margin-bottom: -1px;
-  }
-
-  #service-main-box {
-    display: grid;
-  }
-  #call-box {
-    margin-bottom: -1px;
-  }
-  #call-box {
-    display: grid;
-    margin: 100px 0;
-    justify-content: center;
-  }
-  #call-box h1 {
-    font-size: 35px;
-    margin: 20px auto;
-    margin-left: 18px;
-  }
-  #call-box button {
-    font-size: 15px;
-    padding: 10px 5px;
-    margin-left: 20px;
-  }
-
-  #about {
-    display: grid;
-    margin-top: -1px;
-  }
-  #about-span p {
-    margin-left: -100px;
-  }
-  #about-title h1 {
-    font-size: 45px;
-    text-align: left;
-    margin-left: 20px;
-  }
-
-  #approach {
-    display: grid;
-    margin-top: -1px;
-  }
-  #approach-content h2,
-  #approach-content p {
-    margin-left: -100px;
-    margin-right: 120px;
-  }
-  #approach-testimonial p {
-    font-size: 40px;
-    margin-left: 40px;
-    margin-right: 250px;
-    line-height: 45px;
-  }
-  #contact {
-    display: grid;
-  }
-  #contact-box {
-    margin-left: -100px;
-    width: fit-content;
-  }
-  #contact-box h1 {
-    font-size: 45px;
-    margin: 0 auto;
-    margin-left: -30px;
-  }
-  #contact-form {
-    padding: 5px 73px;
-    width: 85%;
   }
 }

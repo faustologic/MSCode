@@ -14,7 +14,8 @@
 </head>
 <body>
     <header id="header">
-        <img id="header-img" src="./media/MCODE Group - Logo Diapo.svg" alt="MCODE logo" href="#banner"/>
+    <div id="header-main-box">
+        <img id="header-img" src="./media/MCODE Group - Logo Diapo.svg" alt="MCODE logo"/>
 
         <nav id="nav-bar">
             <a href="#banner" class="nav-link">Home</a>
@@ -23,66 +24,83 @@
             <a href="#news" class="nav-link">News</a>
             <a href="#contact" class="nav-link">Contact</a>
         </nav>
+    </div>
     </header>
     <div id="banner">
-        <video autoplay="autoplay" loop="loop" id="video_background" preload="auto" volume="0">
-   <source src="https://uploads-ssl.webflow.com/6001d0d8f8b37802dd9cbc5a/6001d66198ff3d7fe9b05609_Dark-wave-loop-860830_2-transcode.mp4" type="video/mp4" />
+        <video autoplay="autoplay" loop="loop" id="video_background"  preload="auto" volume="0">
+   <source id="video_pattern" src="https://uploads-ssl.webflow.com/6001d0d8f8b37802dd9cbc5a/6001d66198ff3d7fe9b05609_Dark-wave-loop-860830_2-transcode.mp4" type="video/mp4" />
  </video>
- <h1 id="banner-h1">Improving lifes</h1>
- <div id="banner-content">
-     <h1 id="banner-h1-1">with efficient</h1>
-     <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p> -->
+ <div id="banner-main-box">
+     <div id="banner-first-title">
+         <h1>Improving lifes</h1>
+     </div>
+     <div id="banner-second-title">
+         <h1>with efficient</h1>
+         <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p> -->
+     </div>
+     <div id="banner-third-title">
+         <h1 id="banner-h1-2">goverment <strong>services</strong></h1>
+     </div>
  </div>
- <h1 id="banner-h1-2">goverment <strong>services</strong></h1>
 
     </div>
     <div id="content-2">
         <div id="content-content">
-            <h1>Supporting government and citizens</h1>
+            <h1>Supporting government and <span style="color:red">citizens</span></h1>
         </div>
     </div>
     <div id="service">
-        <h1>Our Expertise</h1>
         <div id="service-main-box">
-            <div id="service-box">
-                <h5>Inspections</h5>
-                <p>We're helping goverments, citizens and communities solve our most complex challenges througth digital and technology-enabled business transformation.</p>
-                <button>Learn More</button>
-            </div>
-            <div id="service-box">
-                <h5>Authentication</h5>
-                <p>We're helping goverments, citizens and communities solve our most complex challenges througth digital and technology-enabled business transformation.</p>
-                <button>Learn More</button>
-            </div>
-            <div id="service-box">
-                <h5>Collections</h5>
-                <p>We're helping goverments, citizens and communities solve our most complex challenges througth digital and technology-enabled business transformation.</p>
-                <button>Learn More</button>
+            <h1>Our Expertise</h1>
+            <div id="service-box-container">
+                <div id="service-box">
+                    <h5>Inspections</h5>
+                    <p>We're helping goverments, citizens and communities solve our most complex challenges througth digital and technology-enabled business transformation.</p>
+                    <button>Learn More</button>
+                </div>
+                <div id="service-box">
+                    <h5>Authentication</h5>
+                    <p>We're helping goverments, citizens and communities solve our most complex challenges througth digital and technology-enabled business transformation.</p>
+                    <button>Learn More</button>
+                </div>
+                <div id="service-box">
+                    <h5>Collections</h5>
+                    <p>We're helping goverments, citizens and communities solve our most complex challenges througth digital and technology-enabled business transformation.</p>
+                    <button>Learn More</button>
+                </div>
             </div>
         </div>
     </div>
     <div id="call-action">
         <div id=call-box>
-            <h1>Contact an Expert</h1>
-            <button>Email us!</button>
+            <div id="call-box-title">
+                <h1>Contact an Expert</h1>
+            </div>
+            <div id="call-box-button">
+                <button>Email us!</button>
+            </div>
         </div>
     </div>
     <div id="about">
-        <div id="about-span">
-            <p>Our Company</p>
-        </div>
-        <div id="about-title">
-            <h1>MCODE is a consulting, transformation and digital services business.</h1>
+        <div id="about-main-box">
+            <div id="about-span">
+                <p>Our Company</p>
+            </div>
+            <div id="about-title">
+                <h1>MCODE is a consulting, transformation and digital services business.</h1>
+            </div>
         </div>
     </div>
     <div id="approach">
-        <div id="approach-content">
-            <h2>Our Approach</h2>
-            <p>We deliver innovative solutions – to simplify the connections between businesses and customers, governments and citizens.</p>
-            <!-- <i class="fas fa-level-up-alt fa-rotate-90"></i> -->
-        </div>
-        <div id="approach-testimonial">
-            <p>And, we believe <span style="color:red" style="font-weight: lighter;">good</span><br> can always be <span style="color:red" style="font-weight: lighter;">better</span></p>
+        <div id="approach-main-box">
+            <div id="approach-content">
+                <h2>Our Approach</h2>
+                <p>We deliver innovative solutions – to simplify the connections between businesses and customers, governments and citizens.</p>
+                <!-- <i class="fas fa-level-up-alt fa-rotate-90"></i> -->
+            </div>
+            <div id="approach-testimonial">
+                <p>And, we believe <span style="color:red" style="font-weight: lighter;">good</span><br> can always be <span style="color:red" style="font-weight: lighter;">better</span></p>
+            </div>
         </div>
     </div>
     <!-------------------------------- CARROUSEL------------------------------->
@@ -250,24 +268,37 @@
         </div>
     </div>
     <div id="contact">
-        <!-- <video autoplay="autoplay" loop="loop" id="video_background" preload="auto" volume="0">
-   <source src="https://uploads-ssl.webflow.com/6001d0d8f8b37802dd9cbc5a/6001d66198ff3d7fe9b05609_Dark-wave-loop-860830_2-transcode.mp4" type="video/mp4" />
- </video> -->
- <div id="contact-box">
-     <h1>Let's get<br> in touch</h1>
-     <!-- <i class="fas fa-level-up-alt fa-rotate-90"></i> -->
- </div>
- <div id="contact-form">
-     <form autocomplete="nope">
-         <input required autocomplete="nope" type="text" placeholder="Name"/>
-         <input type="text" placeholder="Last Name"/>
-         <input required type="email" autocomplete="nope" placeholder="Email"/>
-         <textarea placeholder="Message" rows="4" name="message" required></textarea>
-         <button href="#">Submit</button>
-     </form>
- </div>
-
-
+        <div id="contact-main-box">
+            <div id="contact-box">
+                <h1>Let's get<br> in touch</h1>
+                <!-- <i class="fas fa-level-up-alt fa-rotate-90"></i> -->
+            </div>
+            <div id="contact-form">
+                <form autocomplete="nope">
+                    <input required autocomplete="nope" type="text" placeholder="Name"/>
+                    <input autocomplete="nope" type="text" placeholder="Last Name"/>
+                    <input required type="email" autocomplete="nope" placeholder="Email"/>
+                    <textarea placeholder="Message" rows="4" name="message" required></textarea>
+                    <button href="#">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="footer-main-box">
+            <div id="footer-year">
+                <p>©2021</p>
+            </div>
+            <div id="footer-back-top">
+                <a href="#banner" id="footer-back-link">
+                    <i class="fas fa-angle-double-up"></i>
+                    <p>Back to top</p>
+                </a>
+            </div>
+            <div id="footer-allRights">
+                <p>All rights reserved.</p>
+            </div>
+        </div>
     </div>
     <script src="main.js"></script>
     <script defer src="mainCarousel.js"></script>
