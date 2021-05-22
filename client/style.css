@@ -11,7 +11,7 @@ body {
 #header {
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 5;
-  width: 100%;  
+  width: 100%;
 }
 #header-main-box {
   position: relative;
@@ -231,11 +231,13 @@ body {
 
 #call-box {
   position: absolute;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   padding: 20px;
   margin-top: 35vh;
-  margin-left: 15%;
+  /* margin-left: 15%; */
+  width: 100%;
+  justify-content: center;
 }
 #call-box-title {
   background-color: transparent;
@@ -312,35 +314,33 @@ body {
 #approach-main-box {
   position: absolute;
   display: flex;
-  margin-top: 35vh;
+  margin-top: 30vh;
   padding: 20px;
   align-items: center;
+  width: 100%;
+  justify-content: center;
 }
 
 #approach-content {
   color: whitesmoke;
   margin-left: 150px;
   margin-right: 50px;
+  padding-right: 300px;
+  width: 40%;
 }
 #approach-content h2 {
   font-weight: 400;
 }
 #approach-content p {
   text-align: justify;
-  padding-right: 50px;
 }
 
 #approach-testimonial {
   font-size: 40px;
   font-weight: 400;
   color: whitesmoke;
-  width: 90%;
-  margin-right: 150px;
-  padding-left: 50px;
-}
-#approach-testimonial p {
-  padding-right: 50px;
-  margin: 0 auto;
+  padding-right: 100px;
+  width: 60%;
 }
 
 /* --------CAROUSEL, its in othe css file------ */
@@ -350,19 +350,20 @@ body {
 #contact {
   width: 100%;
   position: relative;
-  background-color: rgb(19, 19, 19);
+  background-color: rgb(19, 19, 19, 0.7);
   height: 100vh;
 }
 #contact-main-box {
   position: absolute;
   margin-top: 20vh;
   display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 #contact-box {
   margin: 10px auto;
   padding: 20px 50px;
-  width: 50%;
 }
 
 #contact-box h1 {
@@ -377,7 +378,6 @@ body {
   display: inline;
   margin: 10px auto;
   padding: 20px 150px 20px 100px;
-  width: 50%;
 }
 
 #contact-form input {
@@ -484,5 +484,65 @@ body {
 @media only screen and (min-width: 1400px) {
   body {
     width: 100%;
+  }
+  #header-main-box {
+    justify-content: space-evenly;
+  }
+  #banner {
+    max-height: 40vh;
+  }
+  #content-2 {
+    max-height: 40vh;
+  }
+  #content-content {
+    margin-top: 18vh;
+  }
+  #service {
+    max-height: 40vh;
+  }
+  #call-action {
+    max-height: 50vh;
+  }
+  #call-box {
+    margin-top: 20vh;
+  }
+  #about {
+    max-height: 40vh;
+  }
+  #about-main-box {
+    margin-top: 15vh;
+    width: 100%;
+    justify-content: center;
+  }
+  #about-title {
+    width: 20%;
+  }
+  #approach {
+    max-height: 40vh;
+  }
+  #approach-main-box {
+    margin-top: 18vh;
+  }
+  #approach-content {
+    max-width: 10%;
+  }
+  #contact {
+    max-height: 40vh;
+  }
+  #contact-main-box {
+    margin-top: 15vh;
+  }
+  #contact-box {
+    margin-left: 35%;
+  }
+  #contact-form {
+    margin-right: 30%;
+  }
+  #footer {
+    max-height: 6vh;
+  }
+  #footer-main-box {
+    margin-top: 1.5vh;
+    justify-content: space-evenly;
   }
 }
